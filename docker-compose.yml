@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+  app:
+    image: 'courier-tracking-service:latest'
+    build:
+      context: .
+    ports:
+      - "8088:8080"

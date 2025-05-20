@@ -48,6 +48,20 @@ http://localhost:8080/swagger-ui/index.html
 
 Here, you can explore all available API endpoints, test them, and get detailed information.
 
+## 🛢️ Accessing H2 Database Console
+To access the H2 Database Console, follow these steps:
+
+* Make sure the application is running.
+
+* Navigate to: http://localhost:8080/h2-console
+
+* Use the following credentials:
+
+    * JDBC URL: jdbc:h2:mem:couriertrackingdb
+    * Username: sa 
+    * Password: (leave empty)
+
+* Click Connect.
 
 ## 🧪 Testing
 Run unit and integration tests:

@@ -28,6 +28,9 @@
 	</scm>
 	<properties>
 		<java.version>17</java.version>
+		<lombok.version>1.18.38</lombok.version>
+		<commons.lang.version>3.17.0</commons.lang.version>
+		<openapi.version>2.8.8</openapi.version>
 	</properties>
 	<dependencies>
 		<!-- SPRING BOOT -->
@@ -62,7 +65,22 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<optional>true</optional>
+			<version>${lombok.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- UTIL -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${commons.lang.version}</version>
+		</dependency>
+
+		<!-- OPENAPI -->
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>${openapi.version}</version>
 		</dependency>
 
 		<!-- TEST -->
@@ -76,28 +94,8 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<annotationProcessorPaths>
-						<path>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-						</path>
-					</annotationProcessorPaths>
-				</configuration>
-			</plugin>
-			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<excludes>
-						<exclude>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-						</exclude>
-					</excludes>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>

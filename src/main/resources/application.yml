@@ -10,3 +10,7 @@ spring:
 
 audit:
   user: system
+
+calculation:
+  store-radius: 100
+  earth-radius: 6371000
